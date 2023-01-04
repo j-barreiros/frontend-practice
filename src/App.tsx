@@ -5,6 +5,7 @@ import './App.css'
 import { createBrowserRouter, createRoutesFromElements, Route, Link, Outlet, RouterProvider } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import ProductPreview from './pages/ProductPreview/ProductPreview'
+import NewsHomepage from './pages/NewsHomepage/NewsHomepage'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Route path='/' element={<Root />}>
         <Route index element={<Home />} />
         <Route path='product-preview' element={<ProductPreview />} /> 
+        <Route path='news-homepage' element={<NewsHomepage />} /> 
       </Route>
     )
   )

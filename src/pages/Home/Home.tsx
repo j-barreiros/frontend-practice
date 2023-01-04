@@ -7,6 +7,7 @@ const Home = () => {
         <StyledHome>
             <h1>Home</h1>
             <Link to='/product-preview'>Product Preview</Link>
+            <Link to='/news-homepage'>News Homepage</Link>
         </StyledHome>
     )
 }
