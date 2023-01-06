@@ -29,7 +29,16 @@ const StyledTrendingItem = styled.article`
             color: ${colors.darkGrayBlue};
             line-height: 25px;
         }
+    }
 
+    @media (max-width: 1235px) {
+        grid-column-gap: 15px;
+    }
+
+    @media (max-width: 660px) {
+        .trending-info {
+            justify-content: space-evenly;
+        }
     }
 `
 

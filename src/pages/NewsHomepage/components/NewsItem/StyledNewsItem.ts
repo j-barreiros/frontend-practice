@@ -19,8 +19,16 @@ const StyledNewsItem = styled.article`
         color: ${colors.grayBlue};
         font-size: 15px;
         font-weight: 500;
-        margin-bottom: min(30px, 5px);
+        margin-bottom: 30px;
         line-height: 25px;
+    }
+
+    @media (max-width: 1235px) {
+        margin-bottom: 2vw;
+
+        .text {
+            margin-bottom: 2vw;
+        }
     }
 `
 
