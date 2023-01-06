@@ -15,7 +15,7 @@ const TrendingItem = (props : TrendinItemProps) => {
         <StyledTrendingItem>
             <img className="trending-image" src={image}/>
             <div className="trending-info">
-                <h4 className='trending-rank'>{rank}</h4>
+                <h4 className='trending-rank'>{`${rank < 10 ? `0${rank}` : rank}`}</h4>
                 <h3 className='trending-title'>{title}</h3>
                 <p className='trending-text'>{text}</p>
             </div>
