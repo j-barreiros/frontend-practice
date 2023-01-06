@@ -12,9 +12,12 @@ import pc from './imgs/pc.jpg';
 import keyboard from './imgs/keyboard.jpg';
 import gamer from './imgs/gamer.jpg';
 import TrendingItem from "./components/TrendingItem/TrendingItem";
-import {Logo} from './imgs/Icons'
+import { Logo, OpenMenuIcon, CloseMenuIcon } from './imgs/Icons'
+import { useState } from "react";
 
 const NewsHomepage = () => {
+
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const news = [
         {
@@ -50,10 +53,24 @@ const NewsHomepage = () => {
     ]
 
     return (
-        <StyledNewsHomepage introDesktopImage={introDesktop} introMobileImage={introMobile}>
+        <StyledNewsHomepage introDesktopImage={introDesktop} introMobileImage={introMobile} isMobileMenuOpen={isMobileMenuOpen}>
             <section className='navbar'>
                 <Logo />
                 <nav className='links'>
+                    <a className='nav-link' href='#'>Home</a>
+                    <a className='nav-link' href='#'>News</a>
+                    <a className='nav-link' href='#'>Popular</a>
+                    <a className='nav-link' href='#'>Treding</a>
+                    <a className='nav-link' href='#'>Categories</a>
+                </nav>
+                <button className='mobile-menu-btn' onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                    <OpenMenuIcon />
+                </button>
+
+                <nav className='mobile-menu'>
+                    <button className="mobile-menu-btn" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+                        <CloseMenuIcon />
+                    </button>
                     <a className='nav-link' href='#'>Home</a>
                     <a className='nav-link' href='#'>News</a>
                     <a className='nav-link' href='#'>Popular</a>
